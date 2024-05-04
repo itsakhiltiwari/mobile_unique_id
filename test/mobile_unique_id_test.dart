@@ -7,13 +7,13 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 class MockMobileUniqueIdPlatform
     with MockPlatformInterfaceMixin
     implements MobileUniqueIdPlatform {
-
   @override
   Future<String?> getUniqueId() => Future.value('42');
 }
 
 void main() {
-  final MobileUniqueIdPlatform initialPlatform = MobileUniqueIdPlatform.instance;
+  final MobileUniqueIdPlatform initialPlatform =
+      MobileUniqueIdPlatform.instance;
 
   test('$MethodChannelMobileUniqueId is the default instance', () {
     expect(initialPlatform, isInstanceOf<MethodChannelMobileUniqueId>());
