@@ -23,7 +23,7 @@ abstract class MobileUniqueIdPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+  Future<String?> getUniqueId() {
+    return _instance.getUniqueId();
   }
 }
