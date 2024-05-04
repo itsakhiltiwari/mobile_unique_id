@@ -1,5 +1,5 @@
 name: mobile_unique_id
-description: "A new Flutter plugin project."
+description: "A Flutter plugin to get unique id of mobile devices. Supported for Android and iOS platforms."
 version: 1.0.0
 homepage: https://github.com/itsakhiltiwari/mobile_unique_id
 
