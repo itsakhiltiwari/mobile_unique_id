@@ -1,7 +1,7 @@
 name: mobile_unique_id
 description: "A new Flutter plugin project."
-version: 0.0.1
-homepage:
+version: 1.0.0
+homepage: https://github.com/itsakhiltiwari/mobile_unique_id
 
 environment:
   sdk: '>=3.3.4 <4.0.0'
