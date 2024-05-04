@@ -1,6 +1,6 @@
 # mobile_unique_id
 
-A Flutter plugin to get unique id of mobile devices. Supported for Android and iOS platforms.
+A Flutter plugin to get unique id of a mobile device. Supported for Android and iOS platforms.
 
 ## Installing
 
