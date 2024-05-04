@@ -9,7 +9,7 @@ class MockMobileUniqueIdPlatform
     implements MobileUniqueIdPlatform {
 
   @override
-  Future<String?> getPlatformVersion() => Future.value('42');
+  Future<String?> getUniqueId() => Future.value('42');
 }
 
 void main() {
@@ -19,11 +19,11 @@ void main() {
     expect(initialPlatform, isInstanceOf<MethodChannelMobileUniqueId>());
   });
 
-  test('getPlatformVersion', () async {
+  test('getUniqueId', () async {
     MobileUniqueId mobileUniqueIdPlugin = MobileUniqueId();
     MockMobileUniqueIdPlatform fakePlatform = MockMobileUniqueIdPlatform();
     MobileUniqueIdPlatform.instance = fakePlatform;
 
-    expect(await mobileUniqueIdPlugin.getPlatformVersion(), '42');
+    expect(await mobileUniqueIdPlugin.getUniqueId(), '42');
   });
 }

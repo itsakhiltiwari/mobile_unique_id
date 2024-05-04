@@ -10,8 +10,8 @@ class MethodChannelMobileUniqueId extends MobileUniqueIdPlatform {
   final methodChannel = const MethodChannel('mobile_unique_id');
 
   @override
-  Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
+  Future<String?> getUniqueId() async {
+    final version = await methodChannel.invokeMethod<String>('getUniqueId');
     return version;
   }
 }

@@ -1,5 +1,7 @@
 package com.akhiltiwari.mobile_unique_id
 
+import android.content.Context
+import android.provider.Settings.Secure
 import androidx.annotation.NonNull
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
@@ -15,15 +17,18 @@ class MobileUniqueIdPlugin: FlutterPlugin, MethodCallHandler {
   /// This local reference serves to register the plugin with the Flutter Engine and unregister it
   /// when the Flutter Engine is detached from the Activity
   private lateinit var channel : MethodChannel
+  private lateinit var context: Context
 
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "mobile_unique_id")
+    context = flutterPluginBinding.applicationContext
     channel.setMethodCallHandler(this)
   }
 
   override fun onMethodCall(call: MethodCall, result: Result) {
-    if (call.method == "getPlatformVersion") {
-      result.success("Android ${android.os.Build.VERSION.RELEASE}")
+    if (call.method == "getUniqueId") {
+      var android_id = Secure.getString(context.contentResolver, Secure.ANDROID_ID)
+      result.success(android_id)
     } else {
       result.notImplemented()
     }
