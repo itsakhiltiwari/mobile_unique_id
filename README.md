@@ -6,7 +6,7 @@ A Flutter plugin to get unique id of mobile devices. Supported for Android and i
 
 ```yaml
 dependencies:
-  mobile_unique_id: ^1.0.0
+  mobile_unique_id: ^1.0.2
 ```
 
 ### Import

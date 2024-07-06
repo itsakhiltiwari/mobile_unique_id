@@ -1,10 +1,10 @@
 name: mobile_unique_id
 description: "A Flutter plugin to get unique id of mobile devices. Supported for Android and iOS platforms."
-version: 1.0.0
+version: 1.0.2
 homepage: https://github.com/itsakhiltiwari/mobile_unique_id
 
 environment:
-  sdk: '>=3.3.4 <4.0.0'
+  sdk: '>=3.4.3 <4.0.0'
   flutter: '>=3.3.0'
 
 dependencies:
@@ -15,7 +15,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
+  flutter_lints: ^4.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
